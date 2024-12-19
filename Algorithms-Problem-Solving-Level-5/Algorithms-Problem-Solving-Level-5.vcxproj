@@ -130,7 +130,7 @@
     <ClCompile Include="Algorithms-Problem-Solving-Level-5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clsDblLimkedList.h" />
+    <ClInclude Include="clsDblLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

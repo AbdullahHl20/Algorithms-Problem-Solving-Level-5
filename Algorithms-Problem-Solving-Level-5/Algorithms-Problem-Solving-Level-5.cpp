@@ -2,11 +2,44 @@
 //
 
 #include <iostream>
-#include "clsDblLimkedList.h"
+#include "clsDblLinkedList.h"
 
 int main()
 {
-	clsDblLimkedList<int> myclsDblLimkedList;
+	clsDblLinkedList<int> MydblLinkedList;
+	
+	MydblLinkedList.InsertAtBeginning(5);
+	MydblLinkedList.InsertAtBeginning(2);
+	MydblLinkedList.InsertAtBeginning(3);
+	MydblLinkedList.InsertAtBeginning(4);
+	MydblLinkedList.InsertAtBeginning(2);
+	MydblLinkedList.InsertAtBeginning(10);
+	MydblLinkedList.PrintList();
+
+	clsDblLinkedList<int>::Node* N1 = MydblLinkedList.Find(2);
+
+	if (N1 != NULL)
+		cout << "\nNode with value 2 is Found :-)\n";
+	else
+		cout << "\nNode Is not found :-(\n";
+
+	MydblLinkedList.InsertAfter(N1, 500);
+	cout << "\nAfter Inserting 500 after 2:\n";
+	MydblLinkedList.PrintList();
+
+	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.Find(2);
+	MydblLinkedList.DeleteNode(N2);
+	cout << "\nAfter Deleting 4:\n";
+	MydblLinkedList.PrintList();
+
+	MydblLinkedList.DeleteFirstNode();
+	cout << "\nAfter Deleting First Node:\n";
+	MydblLinkedList.PrintList();
+
+
+	cout << "\nAfter Deleting Last Node:\n";
+	MydblLinkedList.DeleteLastNode();
+	MydblLinkedList.PrintList();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
