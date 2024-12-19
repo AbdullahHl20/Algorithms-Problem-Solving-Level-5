@@ -71,7 +71,7 @@ public:
 			Current = Current->next;
 		}
 		cout << "\n";
-
+		delete Current;
 
 	}
 
