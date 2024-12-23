@@ -40,6 +40,8 @@ int main()
 	cout << "\nAfter Deleting Last Node:\n";
 	MydblLinkedList.DeleteLastNode();
 	MydblLinkedList.PrintList();
+
+	cout << "\nSize Of LinkedList:\n" << MydblLinkedList.Size();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

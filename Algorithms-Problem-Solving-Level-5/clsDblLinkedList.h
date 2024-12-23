@@ -6,7 +6,8 @@ template <class T>
 
 class clsDblLinkedList
 {
-
+protected:
+	int _Size = 0;
 public:
 
 	class Node
@@ -39,6 +40,7 @@ public:
 			head->prev = newNode;
 		}
 		head = newNode;
+		_Size++;
 	}
 
 	Node* Find(T value)
@@ -90,6 +92,7 @@ public:
 		newNode->next = CurrentNode->next;
 		newNode->prev = CurrentNode;
 		CurrentNode->next = newNode;
+		_Size++;
 
 
 	}
@@ -105,6 +108,7 @@ public:
 			head->prev = NULL;
 		}*/
 		delete temp;
+		_Size--;
 
 
 	}
@@ -129,6 +133,7 @@ public:
 			NodeToDelete->prev->next = NodeToDelete->next;
 		}
 		delete NodeToDelete;
+		_Size--;
 
 
 	}
@@ -154,9 +159,14 @@ public:
 		Node* temp = currentNode->next;
 		currentNode->next = NULL;
 		delete temp;
+		_Size--;
 
 
+	}
 
+	int Size() 
+	{
+		return _Size;
 	}
 
 
