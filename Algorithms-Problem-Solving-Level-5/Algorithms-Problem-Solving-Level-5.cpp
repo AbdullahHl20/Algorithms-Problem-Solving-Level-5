@@ -33,6 +33,11 @@ int main()
 	MydblLinkedList.PrintList();
 	cout << "\nTeh Value Is : " << MydblLinkedList.GetItem(5) << "\n";
 	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.GetNode(2);
+
+	cout << "\nBefor Update\n";
+	cout << N2->value << "\nAfter Update\n";
+	 MydblLinkedList.UpdateItem(2,155);
+	
 	cout << N2->value;
 }
 
