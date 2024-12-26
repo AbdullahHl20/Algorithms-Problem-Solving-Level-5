@@ -32,28 +32,8 @@ int main()
 	cout << "\nAfter Inserting 500 after 2:\n";
 	MydblLinkedList.PrintList();
 
-	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.Find(2);
-	MydblLinkedList.DeleteNode(N2);
-	cout << "\nAfter Deleting 4:\n";
-	MydblLinkedList.PrintList();
-
-	MydblLinkedList.DeleteFirstNode();
-	cout << "\nAfter Deleting First Node:\n";
-	MydblLinkedList.PrintList();
-
-
-	cout << "\nAfter Deleting Last Node:\n";
-	MydblLinkedList.DeleteLastNode();
-	MydblLinkedList.PrintList();
-	cout << "\nAfter Deleting Last Node1:\n";
-	MydblLinkedList.Reverse();
-	MydblLinkedList.PrintList();
-	if(MydblLinkedList.IsEmpty())
-		cout << "\n List Is Empty\n";
-	else
-		cout << "\nList Is not Empty\n";
-	
-	cout << "\nSize Of LinkedList:\n" << MydblLinkedList.Size();
+	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.GetNode(2);
+	cout << N2->value;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
