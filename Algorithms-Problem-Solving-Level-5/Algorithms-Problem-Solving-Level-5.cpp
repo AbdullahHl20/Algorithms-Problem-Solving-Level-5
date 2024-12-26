@@ -7,6 +7,11 @@
 int main()
 {
 	clsDblLinkedList<int> MydblLinkedList;
+
+	if (MydblLinkedList.IsEmpty())
+		cout << "\n List Is Empty\n";
+	else
+		cout << "\nList Is not Empty\n";
 	
 	MydblLinkedList.InsertAtBeginning(5);
 	MydblLinkedList.InsertAtBeginning(2);
@@ -40,7 +45,14 @@ int main()
 	cout << "\nAfter Deleting Last Node:\n";
 	MydblLinkedList.DeleteLastNode();
 	MydblLinkedList.PrintList();
-
+	cout << "\nAfter Deleting Last Node1:\n";
+	MydblLinkedList.Reverse();
+	MydblLinkedList.PrintList();
+	if(MydblLinkedList.IsEmpty())
+		cout << "\n List Is Empty\n";
+	else
+		cout << "\nList Is not Empty\n";
+	
 	cout << "\nSize Of LinkedList:\n" << MydblLinkedList.Size();
 }
 
