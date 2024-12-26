@@ -38,7 +38,13 @@ int main()
 	cout << N2->value << "\nAfter Update\n";
 	 MydblLinkedList.UpdateItem(2,155);
 	
-	cout << N2->value;
+
+	 MydblLinkedList.PrintList();
+
+	 MydblLinkedList.InsertAfter(4, 50015);
+
+	 cout<< "\n After Insert \n";
+	 MydblLinkedList.PrintList();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
