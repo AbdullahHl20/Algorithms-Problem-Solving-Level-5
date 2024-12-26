@@ -31,7 +31,7 @@ int main()
 	MydblLinkedList.InsertAfter(N1, 500);
 	cout << "\nAfter Inserting 500 after 2:\n";
 	MydblLinkedList.PrintList();
-
+	cout << "\nTeh Value Is : " << MydblLinkedList.GetItem(5) << "\n";
 	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.GetNode(2);
 	cout << N2->value;
 }
