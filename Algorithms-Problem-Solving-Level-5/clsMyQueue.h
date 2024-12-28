@@ -16,7 +16,6 @@ public:
 		_MyList.InsertAtEnd(Item);
 	}
 
-
 	void pop()
 	{
 		_MyList.DeleteFirstNode();
@@ -25,6 +24,36 @@ public:
 	void Print()
 	{
 		_MyList.PrintList();
+	}
+
+	void Reverse()
+	{
+		_MyList.Reverse();
+	}
+
+	void UpdateItem(int index, T Value)
+	{
+		_MyList.UpdateItem(index, Value);
+	}
+
+	void InsertAfter(int index, T Value)
+	{
+		 _MyList.InsertAfter(index, Value);
+	}
+
+	void Clear()
+	{
+		_MyList.Clear();
+	}
+
+	void InsertAtFront(T Value) 
+	{
+		_MyList.InsertAtBeginning(Value);
+	}
+
+	void InsertAtBack(T Value) 
+	{
+		_MyList.InsertAtEnd(Value);
 	}
 
 	int Size()
@@ -47,6 +76,10 @@ public:
 		return _MyList.GetItem(Size() - 1);
 	}
 
+	T GetItem(int index)
+	{
+		return _MyList.GetItem(index);
+	}
+	
 };
-
 
