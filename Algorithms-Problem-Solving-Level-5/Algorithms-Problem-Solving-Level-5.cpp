@@ -1,71 +1,30 @@
-// Algorithms-Problem-Solving-Level-5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-#include "clsDblLinkedList.h"
-#include "clsMyQueue.h"
-#include "clsMyStack.h"
+#include "clsDynamicArray.h"
+
+using namespace std;
 
 int main()
 {
-    clsMyStack <int> MyStack;
 
-    MyStack.push(10);
-    MyStack.push(20);
-    MyStack.push(30);
-    MyStack.push(40);
-    MyStack.push(50);
+    clsDynamicArray <int> MyDynamicArray(5);
 
+    MyDynamicArray.SetItem(0, 10);
+    MyDynamicArray.SetItem(1, 20);
+    MyDynamicArray.SetItem(2, 30);
+    MyDynamicArray.SetItem(3, 40);
+    MyDynamicArray.SetItem(4, 50);
 
-    cout << "\nStack: \n";
-    MyStack.Print();
+    cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    cout << "\nArray Items: \n";
 
-    cout << "\nStack Size: " << MyStack.Size();
-    cout << "\nStack Top: " << MyStack.Top();
-    cout << "\nStack Bottom: " << MyStack.Bottom();
-
-    MyStack.pop();
-
-    cout << "\n\nStack after pop() : \n";
-    MyStack.Print();
-
-    //Extension #1
-    cout << "\n\n Item(2) : " << MyStack.GetItem(2);
-
-    //Extension #2
-    MyStack.Reverse();
-    cout << "\n\nStack after reverse() : \n";
-    MyStack.Print();
-
-    //Extension #3
-    MyStack.UpdateItem(2, 600);
-    cout << "\n\nStack after updating Item(2) to 600 : \n";
-    MyStack.Print();
-
-    //Extension #4
-    MyStack.InsertAfter(2, 800);
-    cout << "\n\nStack after Inserting 800 after Item(2) : \n";
-    MyStack.Print();
+    MyDynamicArray.PrintList();
 
 
-    //Extension #5
-    MyStack.InsertAtFront(1000);
-    cout << "\n\nStack after Inserting 1000 at top: \n";
-    MyStack.Print();
-
-    //Extension #6
-    MyStack.InsertAtBack(2000);
-    cout << "\n\nStack after Inserting 2000 at bottom: \n";
-    MyStack.Print();
-
-    //Extension #7
-    MyStack.Clear();
-    cout << "\n\nStack after Clear(): \n";
-    MyStack.Print();
 
     system("pause>0");
-}
 
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
