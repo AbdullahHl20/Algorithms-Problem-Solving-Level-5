@@ -19,9 +19,9 @@ int main()
 
     MyDynamicArray.PrintList();
 
-    MyDynamicArray.DeleteFirstItem();
+     MyDynamicArray.DeleteItemByValue(40);
     cout << "\nArray Items after deleting FirstItem: \n";
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    cout << "\nArray find: " << "s" << "\n";
     MyDynamicArray.PrintList();
 
     MyDynamicArray.DeleteLastItem();

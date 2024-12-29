@@ -195,7 +195,35 @@ public:
 
 	void DeleteLastItem()
 	{
-		 DeleteItemAt(_Size - 1);
+		DeleteItemAt(_Size - 1);
+	}
+
+	int Find(T Value)
+	{
+		for (int i = 0; i < _Size; i++)
+		{
+			if (OriginalArray[i] == Value)
+			{
+				return i;
+			}
+		}
+		return -1;
+
+	}
+
+
+	bool DeleteItem(T Value) {
+
+		int index = Find(Value);
+
+		if (index == -1)
+		{
+			return false;
+		}
+
+		DeleteItemAt(index);
+		return true;
+
 	}
 
 };
