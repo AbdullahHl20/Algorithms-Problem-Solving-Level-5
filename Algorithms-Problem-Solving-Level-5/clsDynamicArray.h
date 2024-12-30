@@ -258,24 +258,37 @@ public:
 
 	}
 
-	bool InsertAtBeginning(T value)
+	void InsertAtBeginning(T value)
 	{
-		return InsertAt(0, value);
+
+		InsertAt(0, value);
+
 	}
+
 
 	bool InsertBefore(T index, T value)
 	{
-		return InsertAt(index - 1, value);
+		if (index < 1)
+			return InsertAt(0, value);
+		else
+			return InsertAt(index - 1, value);
+
 	}
 
 	bool InsertAfter(T index, T value)
 	{
-		return InsertAt(index + 1, value);
+		if (index >= _Size)
+			return InsertAt(_Size - 1, value);
+		else
+			return InsertAt(index + 1, value);
+
 	}
 
 	bool InsertAtEnd(T value)
 	{
-		return InsertAt(_Size + 1, value);
+
+		return InsertAt(_Size, value);
+
 	}
 
 };
