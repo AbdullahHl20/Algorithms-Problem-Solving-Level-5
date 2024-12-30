@@ -1,67 +1,56 @@
+
 #include <iostream>
-#include "clsMyStackArr.h"
+#include "clsQueueLine.h"
 
 using namespace std;
 
 int main()
 {
 
-    clsMyStackArr <int> MyStack;
-
-    MyStack.push(10);
-    MyStack.push(20);
-    MyStack.push(30);
-    MyStack.push(40);
-    MyStack.push(50);
+	clsQueueLine PayBillsQueue("A0", 10);
+	clsQueueLine SubscriptionsQueue("B0", 5);
 
 
-    cout << "\nStack: \n";
-    MyStack.Print();
+	PayBillsQueue.IssueTicket();
+	PayBillsQueue.IssueTicket();
+	PayBillsQueue.IssueTicket();
+	PayBillsQueue.IssueTicket();
+	PayBillsQueue.IssueTicket();
 
-    cout << "\nStack Size: " << MyStack.Size();
-    cout << "\nStack Top: " << MyStack.Top();
-    cout << "\nStack Bottom: " << MyStack.Bottom();
+	cout << "\nPay Bills Queue Info:\n";
+	PayBillsQueue.PrintInfo();
 
-    MyStack.pop();
-
-    cout << "\n\nStack after pop() : \n";
-    MyStack.Print();
-
-
-    cout << "\n\n Item(2) : " << MyStack.GetItem(2);
-
-
-    MyStack.Reverse();
-    cout << "\n\nStack after reverse() : \n";
-    MyStack.Print();
-
-
-    MyStack.UpdateItem(2, 600);
-    cout << "\n\nStack after updating Item(2) to 600 : \n";
-    MyStack.Print();
-
-
-    MyStack.InsertAfter(2, 800);
-    cout << "\n\nStack after Inserting 800 after Item(2) : \n";
-    MyStack.Print();
+	PayBillsQueue.PrintTicketsLineRTL();
+	PayBillsQueue.PrintTicketsLineLTR();
 
 
 
-    MyStack.InsertAtFront(1000);
-    cout << "\n\nStack after Inserting 1000 at top: \n";
-    MyStack.Print();
+	PayBillsQueue.PrintAllTickets();
+
+	PayBillsQueue.ServeNextClient();
+	cout << "\nPay Bills Queue After Serving One client\n";
+	PayBillsQueue.PrintInfo();
+
+	cout << "\nSubscriptions Queue Info:\n";
+
+	SubscriptionsQueue.IssueTicket();
+	SubscriptionsQueue.IssueTicket();
+	SubscriptionsQueue.IssueTicket();
 
 
-    MyStack.InsertAtBack(2000);
-    cout << "\n\nStack after Inserting 2000 at bottom: \n";
-    MyStack.Print();
+	SubscriptionsQueue.PrintInfo();
+
+	SubscriptionsQueue.PrintTicketsLineRTL();
+	SubscriptionsQueue.PrintTicketsLineLTR();
+
+	SubscriptionsQueue.PrintAllTickets();
+
+	SubscriptionsQueue.ServeNextClient();
+	cout << "\nSubscriptions Queue After Serving One client\n";
+	SubscriptionsQueue.PrintInfo();
 
 
-    MyStack.Clear();
-    cout << "\n\nStack after Clear(): \n";
-    MyStack.Print();
-
-    system("pause>0");
+	return 0;
 
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

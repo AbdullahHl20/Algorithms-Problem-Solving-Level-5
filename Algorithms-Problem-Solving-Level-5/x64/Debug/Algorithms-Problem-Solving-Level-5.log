@@ -1,2 +1,23 @@
 ﻿  Algorithms-Problem-Solving-Level-5.cpp
-  Algorithms-Problem-Solving-Level-5.vcxproj -> C:\Users\abdullah\source\repos\Algorithms-Problem-Solving-Level-5\x64\Debug\Algorithms-Problem-Solving-Level-5.exe
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(40,19): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(45,23): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(57,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(194,20): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(325,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsString.h(373,16): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+D:\Trraining c++\Algorithms-Problem-Solving-Level-5\Algorithms-Problem-Solving-Level-5\clsQueueLine.h(108,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Algorithms-Problem-Solving-Level-5.cpp')
+  
+  Algorithms-Problem-Solving-Level-5.vcxproj -> D:\Trraining c++\Algorithms-Problem-Solving-Level-5\x64\Debug\Algorithms-Problem-Solving-Level-5.exe
