@@ -226,7 +226,8 @@ public:
 
 	}
 
-	bool InsertAt(T index, T value) {
+	bool InsertAt(T index, T value) 
+	{
 
 		if (index > _Size || index < 0)
 		{
@@ -257,5 +258,24 @@ public:
 
 	}
 
+	bool InsertAtBeginning(T value)
+	{
+		return InsertAt(0, value);
+	}
+
+	bool InsertBefore(T index, T value)
+	{
+		return InsertAt(index - 1, value);
+	}
+
+	bool InsertAfter(T index, T value)
+	{
+		return InsertAt(index + 1, value);
+	}
+
+	bool InsertAtEnd(T value)
+	{
+		return InsertAt(_Size + 1, value);
+	}
 
 };
