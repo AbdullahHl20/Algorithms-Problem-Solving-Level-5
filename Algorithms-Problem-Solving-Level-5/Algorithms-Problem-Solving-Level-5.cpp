@@ -1,45 +1,65 @@
 #include <iostream>
-#include "clsDynamicArray.h"
+#include "clsMyStackArr.h"
 
 using namespace std;
 
 int main()
 {
-    clsDynamicArray <int> MyDynamicArray(5);
 
-    MyDynamicArray.SetItem(0, 10);
-    MyDynamicArray.SetItem(1, 20);
-    MyDynamicArray.SetItem(2, 30);
-    MyDynamicArray.SetItem(3, 40);
-    MyDynamicArray.SetItem(4, 50);
+    clsMyStackArr <int> MyStack;
 
-    cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    cout << "\nArray Items: \n";
-
-    MyDynamicArray.PrintList();
-
-    MyDynamicArray.InsertAtBeginning(400);
-    cout << "\n\nArray after insert 400 at Begining:";
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
-
-    MyDynamicArray.InsertBefore(2, 500);
-    cout << "\n\nArray after insert 500 before index 2:";
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
-
-    MyDynamicArray.InsertAfter(2, 600);
-    cout << "\n\nArray after insert 600 after index 2:";
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
+    MyStack.push(10);
+    MyStack.push(20);
+    MyStack.push(30);
+    MyStack.push(40);
+    MyStack.push(50);
 
 
-    MyDynamicArray.InsertAtEnd(800);
-    cout << "\n\nArray after insert 800 at End:";
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
+    cout << "\nStack: \n";
+    MyStack.Print();
 
+    cout << "\nStack Size: " << MyStack.Size();
+    cout << "\nStack Top: " << MyStack.Top();
+    cout << "\nStack Bottom: " << MyStack.Bottom();
+
+    MyStack.pop();
+
+    cout << "\n\nStack after pop() : \n";
+    MyStack.Print();
+
+
+    cout << "\n\n Item(2) : " << MyStack.GetItem(2);
+
+
+    MyStack.Reverse();
+    cout << "\n\nStack after reverse() : \n";
+    MyStack.Print();
+
+
+    MyStack.UpdateItem(2, 600);
+    cout << "\n\nStack after updating Item(2) to 600 : \n";
+    MyStack.Print();
+
+
+    MyStack.InsertAfter(2, 800);
+    cout << "\n\nStack after Inserting 800 after Item(2) : \n";
+    MyStack.Print();
+
+
+
+    MyStack.InsertAtFront(1000);
+    cout << "\n\nStack after Inserting 1000 at top: \n";
+    MyStack.Print();
+
+
+    MyStack.InsertAtBack(2000);
+    cout << "\n\nStack after Inserting 2000 at bottom: \n";
+    MyStack.Print();
+
+
+    MyStack.Clear();
+    cout << "\n\nStack after Clear(): \n";
+    MyStack.Print();
 
     system("pause>0");
 
