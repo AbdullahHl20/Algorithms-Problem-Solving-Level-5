@@ -137,8 +137,12 @@
     <ClInclude Include="clsMyQueueArr.h" />
     <ClInclude Include="clsMyStack.h" />
     <ClInclude Include="clsMyStackArr.h" />
+<<<<<<< HEAD
     <ClInclude Include="clsQueueLine.h" />
     <ClInclude Include="clsString.h" />
+=======
+    <ClInclude Include="ClsMyString.h" />
+>>>>>>> 981368ed93114eff52f4309bbec31e09c13799a4
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
