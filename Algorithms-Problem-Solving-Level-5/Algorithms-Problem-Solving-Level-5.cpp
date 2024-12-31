@@ -11,18 +11,11 @@ using namespace std;
 int main()
 {
 
-<<<<<<< HEAD
+
 	clsQueueLine PayBillsQueue("A0", 10);
 	clsQueueLine SubscriptionsQueue("B0", 5);
-=======
-	cout << "\n\n\t\t\t\t\t\t Undo/Redo Project\n\n";
 
-	clsMyString S1;
->>>>>>> 981368ed93114eff52f4309bbec31e09c13799a4
 
-	cout << "\nS1  = " << S1.Value << "\n";
-
-<<<<<<< HEAD
 	PayBillsQueue.IssueTicket();
 	PayBillsQueue.IssueTicket();
 	PayBillsQueue.IssueTicket();
@@ -34,45 +27,11 @@ int main()
 
 	PayBillsQueue.PrintTicketsLineRTL();
 	PayBillsQueue.PrintTicketsLineLTR();
-=======
-	S1.Value = "Mohammed";
 
-	cout << "S1  = " << S1.Value << "\n";
-
-	S1.Value = "Mohammed2";
-
-	cout << "S1  = " << S1.Value << "\n";
-
-	S1.Value = "Mohammed3";
-
-	cout << "S1  = " << S1.Value << "\n";
-
-	cout << "\n\nUndo: ";
+	
 	cout << "\n__________\n";
 
-	S1.Undo();
-	cout << "\nS1  after undo = " << S1.Value << "\n";
 
-	S1.Undo();
-	cout << "S1  after undo = " << S1.Value << "\n";
-
-	S1.Undo();
-	cout << "S1  after undo = " << S1.Value << "\n";
-
-	cout << "\n\nRedo: ";
-	cout << "\n__________\n";
-
-	//S1.Redo();
-	//cout << "\nS1  after Redo = " << S1.Value << "\n";
->>>>>>> 981368ed93114eff52f4309bbec31e09c13799a4
-
-	//S1.Redo();
-	//cout << "S1  after Redo = " << S1.Value << "\n";
-
-	//S1.Redo();
-	//cout << "S1  after Redo = " << S1.Value << "\n";
-
-<<<<<<< HEAD
 	PayBillsQueue.PrintAllTickets();
 
 	PayBillsQueue.ServeNextClient();
@@ -98,11 +57,8 @@ int main()
 	SubscriptionsQueue.PrintInfo();
 
 
-	return 0;
-=======
-	system("pause>0");
->>>>>>> 981368ed93114eff52f4309bbec31e09c13799a4
 
+	system("pause>0");
 	return 0;
 }
 
