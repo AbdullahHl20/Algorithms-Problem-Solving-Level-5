@@ -1,69 +1,60 @@
 #include <iostream>
-#include "clsMyStackArr.h"
+#include "ClsMyString.h"
 
 using namespace std;
 
 int main()
 {
 
-    clsMyStackArr <int> MyStack;
+	cout << "\n\n\t\t\t\t\t\t Undo/Redo Project\n\n";
 
-    MyStack.push(10);
-    MyStack.push(20);
-    MyStack.push(30);
-    MyStack.push(40);
-    MyStack.push(50);
+	clsMyString S1;
 
+	cout << "\nS1  = " << S1.Value << "\n";
 
-    cout << "\nStack: \n";
-    MyStack.Print();
+	S1.Value = "Mohammed";
 
-    cout << "\nStack Size: " << MyStack.Size();
-    cout << "\nStack Top: " << MyStack.Top();
-    cout << "\nStack Bottom: " << MyStack.Bottom();
+	cout << "S1  = " << S1.Value << "\n";
 
-    MyStack.pop();
+	S1.Value = "Mohammed2";
 
-    cout << "\n\nStack after pop() : \n";
-    MyStack.Print();
+	cout << "S1  = " << S1.Value << "\n";
 
+	S1.Value = "Mohammed3";
 
-    cout << "\n\n Item(2) : " << MyStack.GetItem(2);
+	cout << "S1  = " << S1.Value << "\n";
 
+	cout << "\n\nUndo: ";
+	cout << "\n__________\n";
 
-    MyStack.Reverse();
-    cout << "\n\nStack after reverse() : \n";
-    MyStack.Print();
+	S1.Undo();
+	cout << "\nS1  after undo = " << S1.Value << "\n";
 
+	S1.Undo();
+	cout << "S1  after undo = " << S1.Value << "\n";
 
-    MyStack.UpdateItem(2, 600);
-    cout << "\n\nStack after updating Item(2) to 600 : \n";
-    MyStack.Print();
+	S1.Undo();
+	cout << "S1  after undo = " << S1.Value << "\n";
 
+	cout << "\n\nRedo: ";
+	cout << "\n__________\n";
 
-    MyStack.InsertAfter(2, 800);
-    cout << "\n\nStack after Inserting 800 after Item(2) : \n";
-    MyStack.Print();
+	//S1.Redo();
+	//cout << "\nS1  after Redo = " << S1.Value << "\n";
 
+	//S1.Redo();
+	//cout << "S1  after Redo = " << S1.Value << "\n";
 
+	//S1.Redo();
+	//cout << "S1  after Redo = " << S1.Value << "\n";
 
-    MyStack.InsertAtFront(1000);
-    cout << "\n\nStack after Inserting 1000 at top: \n";
-    MyStack.Print();
+	system("pause>0");
 
-
-    MyStack.InsertAtBack(2000);
-    cout << "\n\nStack after Inserting 2000 at bottom: \n";
-    MyStack.Print();
-
-
-    MyStack.Clear();
-    cout << "\n\nStack after Clear(): \n";
-    MyStack.Print();
-
-    system("pause>0");
-
+	return 0;
 }
+
+
+
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
